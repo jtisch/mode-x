@@ -1,0 +1,35 @@
+
+
+                    Mode-X What's It All About?
+
+
+     Well, mode-x is a 320*200*256 mode which allows upto 4 pages of memory
+   to hold BitMap images. Though the viewable portion is still 320*200, the
+   memory layout can be configured in many ways but for this explination
+   I will use a 1280*200 configuration.
+
+
+        * EACH VIEWABLE PAGE REQUIRES ONLY 16000 ADDRESSABLE POINTS, this
+         is how you get the 4 pages, becuase 16000*4 = 64000.
+
+        * A000:0000 actually access pixels 0-3
+          A000:0001 access pixles 4-7
+          A000:004F (79 decimal) access pixels 316-319
+          This is done by using the MAP MASK REGISTER to tell the video
+          card which plane to access. Plane 0 = Pixel 0
+                                      Plane 1 = Pixel 1
+
+        This register resides at 3C4h and the offset is 2h.
+        The data register is located at 3C5h
+
+                so IE:  MOV     DX,3C4h
+                        MOV     AX,0F02h
+                        OUT     DX,AX
+
+        This will turn on all BIT-PLANES, therefore one MOVSB from the host
+        will cause all 4 pixels to be updated with the value written fom host
+        to the VIDEO ADDRESS:OFFSET.
+
+        But if i were to pass it a value of :
+
+                       MOV      AX,0

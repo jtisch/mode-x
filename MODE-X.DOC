@@ -1,0 +1,24 @@
+
+
+                       The Demo In General
+
+
+
+        This is my first EVER 100% Assembly Demo i have written, therefore
+    if it seems a little crummy thats why... Although this one is in
+    "Mode-X", I was able to copy ALL bitmaps to the video memory and ALL
+    transferrs from that point are done from within in the Video Card with
+    little to no HOST interaction, thus making it rather quick. But oh well,
+    check it out, if something is screwed up than let me know, the code is
+    ALL here, nothing was left out, I was using TASM and TLINK for the
+    compiler and the Linker, but am sure other linkers will work even the
+    regular DOS version.  This is NOT to be distributed ANY WHERE ELSE ACCEPT
+    for the CODERS within THG/FX, I am not stingy, but think that others
+    should get their own understanding and once they reach a point, than
+    they are worthy of getting source like this. No one ever gave me code
+    until I was a respected coder.. But oh enough said..... The demo can
+    be distributed WITHOUT the source to all to enjoy!.
+
+
+                                        John - xxx xxxxxxxxxxx
+

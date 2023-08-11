@@ -1,0 +1,11 @@
+
+ Start  Stop   Length Name               Class
+
+ 00000H 00894H 00895H CODE               CODE
+ 00895H 02259H 019C5H DATA               DATA
+ 0225AH 11B19H 0F8C0H EXTRASEG1          
+ 11B1AH 17C99H 06180H EXTRASEG2          
+ 17C9AH 17E99H 00200H STACKS             STACK
+
+Program entry point at 0000:0000
+
